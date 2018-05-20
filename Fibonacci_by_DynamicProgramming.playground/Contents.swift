@@ -17,6 +17,7 @@ func fib_dp(n: Int) -> UInt {
 // Because the recurrence depends on two arguments, we only need to retain the last two values we have seen earlier.
 
 func fib_dp2(value: Int) -> UInt {
+  precondition(value < 94, "should be less than 94 as it appears to maxed out the Int64's capacity")
   var back2: UInt = 0 // last two values of f[n]
   var back1: UInt = 1
   var next: UInt
